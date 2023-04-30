@@ -9,13 +9,13 @@ Assessment Requirements
 */
 
 // create a variable to hold your NFT's
-const itsMe = ();
+const itsMe = [];
 
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
 function iAmMe (Name, Age, Hobies) {
-    const itsMe = "";
+    var itsMe = "";
     itsMe += "I am " + Name + ", " + Age + " years old. And I love doing " + Hobies + ".";
     return itsMe;
 }
