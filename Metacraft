@@ -9,36 +9,35 @@ Assessment Requirements
 */
 
 // create a variable to hold your NFT's
-const itsMe = [];
-
+ const itsMe = []
 // this function will take in some values as parameters, create an
 // NFT object using the parameters passed to it for its metadata, 
 // and store it in the variable above.
-function iAmMe (Name, Age, Hobies) {
-    var itsMe = "";
-    itsMe += "I am " + Name + ", " + Age + " years old. And I love doing " + Hobies + ".";
-    return itsMe;
+function mintItsMe (Name, Age, Hobbies) {
+    const ME = {
+        "Name": Name,
+        "Age": Age,
+        "Hobbies": Hobbies,
+    }
+    itsMe.push(ME);
+    console.log("Minted " + Name);
 }
-
-console.log(iAmMe("Karen", "19", "yoga"));
 
 // create a "loop" that will go through an "array" of NFT's
 // and print their metadata with console.log()
-function listNFTs () {
-    var loopieLoops = [10, 20, 30];
-    var luupSs = 0;
-for (var i = 0; i < loopieLoops.length; i++) {
-    luupSs += loopieLoops[i];
-}
-console.log(luupSs);
+function listMe () {
+    for (let i = 0; i < itsMe.length; i++) {
+        console.log(itsMe[i]);
+    }
 }
 
 // print the total number of NFTs we have minted to the console
-function getTotalSupply() {
-console.log(loopieLoops.length);
+function getTotalMe () {
+    console.log(itsMe.length);
 }
 
 // call your functions below this line
-iAmMe ("Karen", "19", "yoga");
-listNFTs ();
-getTotalSupply ();
+mintItsMe("Karen", "19", "yoga");
+listMe();
+getTotalMe();
+
